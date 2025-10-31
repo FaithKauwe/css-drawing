@@ -114,6 +114,8 @@ the larger the number, the farther from the left edge */
 .tooth-1 {
     top: 555px;
     left: 386px;
+    /* use clip-path to make a polygon to make the teeth pointy */
+    clip-path: polygon(0px 0px, 14px 0px, 10px 20px, 4px 20px);
 }
 
 .tooth-2 {
@@ -134,6 +136,7 @@ the larger the number, the farther from the left edge */
 .tooth-5 {
     top: 555px;
     left: 458px;
+    clip-path: polygon(0px 0px, 14px 0px, 10px 20px, 4px 20px);
 }
 
 .tooth-bottom {
@@ -167,5 +170,36 @@ the larger the number, the farther from the left edge */
 .tooth-bottom-5 {
     top: 582px;
     left: 458px;
+}
+
+.eye-socket {
+    position: absolute;
+    /* ratio of size is 7/9 */
+    width: 70px;
+    height: 90px;
+    background-color: #000000;
+    border-radius: 50% 0 50% 50%;
+}
+
+.eye-left {
+    top: 390px;
+    left: 369px;
+    transform: rotate(-15deg);
+}
+
+.eye-right {
+    top: 390px;
+    left: 449px;
+    transform: rotate(15deg);
+}
+
+.nose-cavity {
+    position: absolute;
+    top: 470px;
+    left: 414px;
+    width: 30px;
+    height: 40px;
+    background-color: #000000;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
 
