@@ -56,6 +56,7 @@ position to container, not each other*/
     left: 290px;
     width: 60px;
     height: 90px;
+/* use radial gradiant effect to make the internal part of the flame glow */
     background: radial-gradient(circle at 50% 80%, 
         #ffff99 0%, 
         #ffcc33 20%, 
@@ -63,9 +64,108 @@ position to container, not each other*/
         #ff6600 70%, 
         #ff3300 100%);
     border-radius: 50% 0 50% 50%;
+/* 3 layers of box shadow to create the external glow aura */
     box-shadow: 
         0 0 20px #ff9933,
         0 0 40px #ff6600,
         0 0 60px #ff3300;
+}
+
+.skull-cranium {
+    position: absolute;
+/* increaswe the distance between the top border of the container and the object
+the larger the number, the farther from the top edge */
+    top: 350px;
+/* increaswe the distance between the left border of the container and the object
+the larger the number, the farther from the left edge */
+    left: 339px;
+    width: 180px;
+    height: 200px;
+    background-color: #f5f5f5;
+    border-radius: 50% 50% 40% 40%;
+    box-shadow: 
+        inset -5px -5px 15px rgba(0, 0, 0, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.skull-jaw {
+    position: absolute;
+    /* these numbers control the position of the object */
+    top: 545px;
+    left: 384px;
+    /* these numbers control the siz of the object */
+    width: 90px;
+    height: 80px;
+    background-color: #f5f5f5;
+    border-radius: 0 0 45% 45%;
+    box-shadow: 
+        inset 5px 5px 10px rgba(0, 0, 0, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tooth {
+    position: absolute;
+    width: 14px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 2px 2px 0 0;
+}
+
+.tooth-1 {
+    top: 555px;
+    left: 386px;
+}
+
+.tooth-2 {
+    top: 555px;
+    left: 404px;
+}
+
+.tooth-3 {
+    top: 555px;
+    left: 422px;
+}
+
+.tooth-4 {
+    top: 555px;
+    left: 440px;
+}
+
+.tooth-5 {
+    top: 555px;
+    left: 458px;
+}
+
+.tooth-bottom {
+    position: absolute;
+    width: 14px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 0 0 2px 2px;
+}
+
+.tooth-bottom-1 {
+    top: 582px;
+    left: 386px;
+}
+
+.tooth-bottom-2 {
+    top: 582px;
+    left: 404px;
+}
+
+.tooth-bottom-3 {
+    top: 582px;
+    left: 422px;
+}
+
+.tooth-bottom-4 {
+    top: 582px;
+    left: 440px;
+}
+
+.tooth-bottom-5 {
+    top: 582px;
+    left: 458px;
 }
 
