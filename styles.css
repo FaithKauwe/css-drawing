@@ -183,14 +183,17 @@ the larger the number, the farther from the left edge */
 
 .eye-left {
     top: 390px;
-    left: 369px;
+    left: 359px;
     transform: rotate(-15deg);
 }
 
 .eye-right {
     top: 390px;
-    left: 449px;
-    transform: rotate(15deg);
+    left: 439px;
+    /* applies 2 transformations in sequence, on the same line. first, rotate the element 15 degrees to be the mirror opposite of the
+    left eye which is -15 degrees. then use scaleX(-1) to flip the element horizontally, effectively mirroring it across the y-axis. */
+    transform: rotate(15deg) scaleX(-1);
+    
 }
 
 .nose-cavity {
