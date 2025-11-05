@@ -28,6 +28,44 @@ TODO: (post-MVP) Make box-shadows themeable - could add custom shadow color vari
     --tooth-color: #ffffff;
 }
 
+[data-theme="blood-moon"] {
+    --bg-glow-center: #8B1538;
+    --bg-glow-mid: #4a0e2a;
+    --bg-glow-outer: #2a0515;
+    --bg-glow-edge: #0a0008;
+    
+    --candle-color: #5c1a1a;
+    
+    --flame-center: #ff9999;
+    --flame-inner: #ff6699;
+    --flame-mid: #ff3366;
+    --flame-outer: #cc0033;
+    --flame-edge: #990022;
+    
+    --skull-color: #ffe6eb;
+    --skull-holes: #330011;
+    --tooth-color: #ffeef2;
+}
+
+[data-theme="birthday"] {
+    --bg-glow-center: #87CEEB;
+    --bg-glow-mid: #5fa8d3;
+    --bg-glow-outer: #3d5a80;
+    --bg-glow-edge: #1a2332;
+    
+    --candle-color: #FFD700;
+    
+    --flame-center: #ffff66;
+    --flame-inner: #ffcc00;
+    --flame-mid: #ff66cc;
+    --flame-outer: #ff3399;
+    --flame-edge: #ff0066;
+    
+    --skull-color: #ffffff;
+    --skull-holes: #ff6347;
+    --tooth-color: #f0f0f0;
+}
+
 body {
     display: flex;
     justify-content: center;
