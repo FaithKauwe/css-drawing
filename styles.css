@@ -376,3 +376,34 @@ the larger the number, the farther from the left edge */
     transform: rotate(-45deg);
 }
 
+.theme-controls {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.theme-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 300ms ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.theme-btn:active {
+    transform: translateY(0);
+}
+
