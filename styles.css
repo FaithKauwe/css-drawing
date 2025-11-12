@@ -290,18 +290,35 @@ the larger the number, the farther from the left edge */
 
 .party-hat {
     position: absolute;
-    top: 310px;
-    left: 380px;
+/* make a triangle with width and height of 0 and the lines will meet in the middle*/
+    top: 275px;
+    left: 370px;
     width: 0;
     height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 80px solid #ff6347;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 90px solid #ff6347;
     opacity: 0;
     transition: opacity 500ms;
 }
 
 [data-theme="birthday"] .party-hat {
+    opacity: 1;
+}
+
+.party-pom {
+    position: absolute;
+    top: 260px;
+    left: 415px;
+    width: 30px;
+    height: 30px;
+    background-color: #ff66cc;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+[data-theme="birthday"] .party-pom {
     opacity: 1;
 }
 
