@@ -394,8 +394,9 @@ the larger the number, the farther from the left edge */
 }
 
 .theme-btn {
-    padding: 12px 24px;
-    font-size: 16px;
+    position: relative;
+    padding: 16px 32px;
+    font-size: 18px;
     font-weight: 600;
     border: 2px solid #333;
     border-radius: 8px;
@@ -403,6 +404,7 @@ the larger the number, the farther from the left edge */
     cursor: pointer;
     transition: all 300ms ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: visible;
 }
 
 .theme-btn:hover {
@@ -414,7 +416,25 @@ the larger the number, the farther from the left edge */
     transform: translateY(0);
 }
 
-/* define the keyframes for the flicker animation, each one is a different state of scale and opacity */
+.theme-btn[data-theme="halloween"]::after {
+    content: "👻";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    font-size: 32px;
+    opacity: 0;
+    transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.theme-btn[data-theme="halloween"]:hover::after {
+    top: 40px;
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+/* define the keyframes for the flicker animation, each one is a different state of scale and opacity
+and the % represent the amount of time within the loop where each keyframe is happening */
 @keyframes flicker {
     0% {
         transform: scale(1) translateY(0);
