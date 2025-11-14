@@ -132,6 +132,13 @@ position to container, not each other*/
         0 0 20px var(--flame-mid),
         0 0 40px var(--flame-outer),
         0 0 60px var(--flame-edge);
+/* call the flicker animation defined below with keyframes, set loop to 2 seconds
+ease-in-out - animation-timing-function
+Controls the pacing/easing between keyframes
+ease-in-out = starts slow, speeds up in middle, ends slow (smooth!)
+Other options: linear, ease, ease-in, ease-out, or custom cubic-bezier()
+ infinite - animation-iteration-count, how many x it repeats */
+        animation: flicker 2s ease-in-out infinite;
 }
 
 .skull-cranium {
@@ -405,5 +412,33 @@ the larger the number, the farther from the left edge */
 
 .theme-btn:active {
     transform: translateY(0);
+}
+
+/* define the keyframes for the flicker animation, each one is a different state of scale and opacity */
+@keyframes flicker {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(1.05, 0.95) translateY(-1px);
+        opacity: 0.95;
+    }
+    40% {
+        transform: scale(0.98, 1.03) translateY(1px);
+        opacity: 0.9;
+    }
+    60% {
+        transform: scale(1.02, 0.97) translateY(-2px);
+        opacity: 0.93;
+    }
+    80% {
+        transform: scale(0.97, 1.04) translateY(0);
+        opacity: 0.98;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
 
