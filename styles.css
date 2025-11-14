@@ -415,7 +415,8 @@ the larger the number, the farther from the left edge */
 .theme-btn:active {
     transform: translateY(0);
 }
-
+/* set a pseudo element with the content being the ghost emoji 
+opacity set at 0 on the before so it appears suddenly when user hovers*/
 .theme-btn[data-theme="halloween"]::after {
     content: "👻";
     position: absolute;
@@ -431,6 +432,24 @@ the larger the number, the farther from the left edge */
     top: 40px;
     transform: translateX(-50%) scale(1);
     opacity: 1;
+}
+
+/* pseudo element  to crete a gradient background- use the z index so it's behind the text */
+.theme-btn[data-theme="blood-moon"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(180deg, #8B0000 0%, #5c0a0a 100%);
+    border-radius: 8px;
+    z-index: -1;
+    transition: height 600ms ease-out;
+}
+
+.theme-btn[data-theme="blood-moon"]:hover::before {
+    height: 100%;
 }
 
 /* define the keyframes for the flicker animation, each one is a different state of scale and opacity
